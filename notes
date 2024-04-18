@@ -1,0 +1,49 @@
+Docker -> Software de virtualizacao
+
+Docker hub - Site principal
+
+Permissoes em docker: sudo chmod 666 /var/run/docker.sock
+
+docker ps : mostra os containers em execução
+docker ps -a : mostra todos os containers
+docker ps -q : mostra o ID do container
+docker ps -aq : mostra todos os IDS de todos os containers
+docker stop : para o container a ser executado
+
+docker container rm $(docker ps -aq) : Elimina todos os containers "instalados"
+docker container ls : mostra todos os containers
+docker rmi [id da imagem] : Elimina a imagem selecionada
+
+docker run -it [nome do container] : Cria um novo container no qual executa a máquina solicitada
+docker start [nome do container] : Ativa um container que nao esta a ser executado
+docker exec [nome do container] ls : dentro do container mostra as pastas
+docker exec -it [nome do container] /bin/bash : Executa o terminal dentro do container
+
+figlet : Função para escrever na tela o solicitado
+
+docker run -it [nome do container:nome do container] : realiza o script dentro do docker file 
+docker build : Constroi uma imagem a partir de um dockerfile 
+
+Componentes do Docker : Imagens ; Containers ; volumes e Redes
+
+Docker volume ls : lista os volumes 
+
+Para eliminar todos o containers, imagens ou networks é necessário criar uma variável de sistema ou seja "$(... ... ...)" como por exemplo:
+
+- docker rmi $(docker image ls -q) - elimina todas as imagens possíveis
+- docker rm $(docker ps -aq) - elimina todos os containers
+- docker network rm $(docker network ls -q) -  elimina todas as networks possiveis
+
+mkdir dados ; docker run -it -v ./dados:[pasta dentro do container] [nome do container] /bin/bash: Para criar um volume
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Docker image -> E uma representação estática de um ambiente de software completo, incluindo sistema operacional, bibliotecas e aplicativos necessários para executar um processo. Essa representação é construída a partir de um conjunto de instruções em um Dockerfile e pode ser compartilhada e distribuída facilmente. Quando executada, uma imagem Docker torna se um contêiner isolado e portátil, permitindo a execução consistente de aplicativos em diferentes ambientes.
+
+
+Docker File -> E um ficheiro de texto que contém uma lista de instruções que o Docker usa para criar uma imagem Docker. Essas instruções incluem coisas como qual imagem base usar, quais comandos executar para configurar o ambiente, quais ficheiros copiar para a imagem e como configurar o contêiner quando ele é iniciado. Em resumo, um Dockerfile é um conjunto de instruções para construir uma imagem Docker.
+
+
+Container -> E uma instancia ( copia ) de uma imagem docker, que se torna em software devido a sua execucao, encapsula uma aplicacao e as suas dependências em um ambiente isolado, permitindo que a aplicacao seja executada de maneira consistente e portátil em diferentes sistemas operacionais e ambientes de computação.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
