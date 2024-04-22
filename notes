@@ -47,3 +47,58 @@ Docker File -> E um ficheiro de texto que contém uma lista de instruções que 
 Container -> E uma instancia ( copia ) de uma imagem docker, que se torna em software devido a sua execucao, encapsula uma aplicacao e as suas dependências em um ambiente isolado, permitindo que a aplicacao seja executada de maneira consistente e portátil em diferentes sistemas operacionais e ambientes de computação.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+sage:  docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+
+Execute a command in a running container
+
+Aliases:
+  docker container exec, docker exec
+
+Options:
+  -d, --detach               Detached mode: run command in the background
+      --detach-keys string   Override the key sequence for detaching a container
+  -e, --env list             Set environment variables
+      --env-file list        Read in a file of environment variables
+  -i, --interactive          Keep STDIN open even if not attached
+      --privileged           Give extended privileges to the command
+  -t, --tty                  Allocate a pseudo-TTY
+  -u, --user string          Username or UID (format: "<name|uid>[:<group|gid>]")
+  -w, --workdir string       Working directory inside the container
+-----------------
+dentro do docker n usa sudo
+---------------------
+show databases;   // mostrar databases
+create database aacarvalho;   // criar
+drp database    // deletar
+use database   // utiliza a database
+show database   // mostrar
+create table    // tabela
+columns    
+alter  // alternar
+
+show databases;                        -> Mostra as databases 
+create database nome_da_basedados;     -> Cria uma base de dados 
+use nome_da_basedados;                 -> Para utilizar uma base de dados 
+drop database nome_da_basedados;       -> Elimina uma base de dados 
+drop table nome_da_basedados;          -> Elimina uma table 
+show tables;                           -> Mostra as tabelas dentro daquela database onde estamos
+show columns from nome_da_table;       -> Mostra a estrutura de uma table
+
+create table nome_da_tabela (         -> Cria uma tabela, e dentro dos parenteses fica a estrutura da mesma
+    -> PessoaID int,
+    -> ultimoNome varchar(255),
+    -> primeiroNome varchar(255),
+    -> morada varchar(255),
+    -> cidade varchar(255)
+    -> );         
+
+create table teste as select ultimoNome, primeiroNome from pessoa;        -> Cria uma tabela chamada "teste" com selecionado "ultimoNome" e "primeiroNome" da tabela pessoa
+
+alter table pessoa add (
+    -> email varchar(255));
+
+alter table pessoa drop column email;
+
+alter table pessoa modify column dataNascimento year;
+
+ 
