@@ -130,6 +130,17 @@ alter table pessoa drop column email;                                     -> Alt
 alter table pessoa add dataNascimento date;                               -> Altera a tabela "pessoa" adicionando dataNasicmento do tipo "date"
 
 alter table pessoa modify column dataNascimento year;                     -> Altera a tabela "pessoa" modificando a coluna dataNascimento po tipo "year"
+--------------------------
+unique -----> chave primaria
 
+
+
+
+create table orders (
+     orderID int not null,
+     orderNumber int not null,
+     personID int,
+     primary key (orderID),
+     foreign key (personID) references pessoas(id));
 
  
