@@ -142,5 +142,25 @@ create table orders (
      personID int,
      primary key (orderID),
      foreign key (personID) references pessoas(id));
+----------------------------------------
 
- 
+Chave Primaria -> Chave / Valor , que usamos para referenciar a(s) linha(s) de dados.
+
+Chave Estrangeira -> Chave / Valor , que usamos para referenciar a(s) linha(s) de dados de outra tabela.
+-------------
+alter table pessoas auto_increment=1000;
+Query OK, 0 rows affected (0.01 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> insert into pessoas (uNome, pNome, age)
+    -> values ("Leite","Paulo",49);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from pessoas;
++----------+-------+-------+------+
+| pessoaID | uNome | pNome | age  |
++----------+-------+-------+------+
+|     1000 | Leite | Paulo |   49 |
++----------+-------+-------+------+
+1 row in set (0.00 sec)
+
