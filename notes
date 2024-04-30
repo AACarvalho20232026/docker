@@ -163,4 +163,14 @@ mysql> select * from pessoas;
 |     1000 | Leite | Paulo |   49 |
 +----------+-------+-------+------+
 1 row in set (0.00 sec)
+-----------------------
+create view nome_da_view as select nome_da_column from nome_table where condition;           -> Cria basicamente um atalho
+ex: create view maioresDeVinte as select ultimoNome from pessoas where age>20;
+
+foreign key (column1) references nome_table (column2);
+ex: foreign key (ID_professor) references alunos (ID_aluno);
+// adiciona uma chave estrangeira a coluna ID_Professor que tem ligacao a coluna ID_aluno da table alunos
+
+select count(distinct column) from table;
+// Mostra a quantidade de entidades diferentes naquela coluna daquela tabela v
 
