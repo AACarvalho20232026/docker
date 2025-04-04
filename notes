@@ -175,4 +175,8 @@ select count(distinct column) from table;
 // Mostra a quantidade de entidades diferentes naquela coluna daquela tabela v
 ____________________________________________________________________________________
 
+> -> direçao onde vai o backup
+________________
 
+mysqldump -u root -p ent2 > enta2_d.sql
+                     (db)       
