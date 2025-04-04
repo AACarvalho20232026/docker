@@ -180,3 +180,11 @@ ________________
 
 mysqldump -u root -p ent2 > enta2_d.sql
                      (db)       
+_________________________________________
+mysql port -> 3306
+
+-P -> PORT
+
+sudo apt install mysql-client-core-8.0
+
+raid -> RAID foi originalmente denominado de "Redundant Array of Inexpensive Drives". Com o tempo, numa tentativa de dissociar o conceito de "discos baratos", a indústria reviu o acrônimo para "Redundant Array of Independent Disks".
