@@ -173,4 +173,6 @@ ex: foreign key (ID_professor) references alunos (ID_aluno);
 
 select count(distinct column) from table;
 // Mostra a quantidade de entidades diferentes naquela coluna daquela tabela v
+____________________________________________________________________________________
+
 
