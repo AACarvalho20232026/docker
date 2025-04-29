@@ -201,3 +201,11 @@ _________________________________________
 
 
 ____________________________
+#verifica se o nome do ficheiro foi atribuido
+if [ -z "$1" ]; then   
+    echo "Usage: $0 <filename>"
+    exit 1
+fi
+
+#cria um fichheiro com o nome atribuido
+touch "$1"
