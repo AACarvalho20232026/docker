@@ -209,3 +209,7 @@ fi
 
 #cria um fichheiro com o nome atribuido
 touch "$1"
+_______________________________
+              ?existe?
+backupBB.sh <inputFile> <outputFile>
+            se existe->cria
