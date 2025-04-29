@@ -213,3 +213,19 @@ _______________________________
               ?existe?
 backupBB.sh <inputFile> <outputFile>
             se existe->cria
+_______________________________________
+if [ -z "$1" ]; then   
+    echo "Usage: $0 <filename>"
+    exit 1
+fi
+
+if [ -z "$2" ]; then   
+    echo "tens que dar o name do ficheiro para o output"
+    exit 1
+else   
+    cp "$1" "$2"
+fi
+
+echo "Backup de $1 criado como $2"
+
+
