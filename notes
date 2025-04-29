@@ -188,3 +188,16 @@ mysql port -> 3306
 sudo apt install mysql-client-core-8.0
 
 raid -> RAID foi originalmente denominado de "Redundant Array of Inexpensive Drives". Com o tempo, numa tentativa de dissociar o conceito de "discos baratos", a indústria reviu o acrônimo para "Redundant Array of Independent Disks".
+
+--------------------------------------------------
+if [ -z "$1" ]; -> verifica se existe
+
+_________________________________________
+# a) colocar o ficheiro em executavel
+# sudo chmod +x bashFileWork.sh
+#   ./bashFileWork.sh <filename>
+# B) Executar o Ficheiro
+#   bash ./bashFileWork.sh <filename>
+
+
+____________________________
