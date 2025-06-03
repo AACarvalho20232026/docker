@@ -227,5 +227,6 @@ else
 fi
 
 echo "Backup de $1 criado como $2"
-
+______________________________________
+docker exec -> executar dentro do container
 
