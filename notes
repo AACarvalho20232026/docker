@@ -229,4 +229,12 @@ fi
 echo "Backup de $1 criado como $2"
 ______________________________________
 docker exec -> executar dentro do container
+__________________
+$# -> n de parametros 
+______________________
+read -p "mysql username: " MYSQL_USER
+read -s -p "mysql password: " MYSQL_PASS
+
+echo $MYSQL_USER
+eco $MYSQL_PASS
 
