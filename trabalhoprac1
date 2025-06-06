@@ -1,0 +1,20 @@
+#!/bin/bash
+
+if [ "$#" -ne 2 ]; then
+  echo "Uso: $0 <data_base> <data_base.sql>"
+  exit 1
+fi
+
+DATABASE=$1
+DESTINO=$2
+
+USER="root"
+PASS="root"
+
+mysqldump -u "$USER" -p"$PASS" "$DATABASE" > "$DESTINO"
+
+if [ $? -eq 0 ]; then
+  echo "Backup da base de dados '$DATABASE' realizado com sucesso em '$DESTINO'"
+else
+  echo "Erro ao fazer backup da base de dados '$DATABASE'"
+fi
